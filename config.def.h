@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "mono:pixelsize=13:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -82,7 +82,7 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* Terminal colors (16 first used in escape sequence) */
+/* gruvbox color scheme */
 static const char *colorname[] = {
 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
 	"#cc241d",
@@ -183,8 +183,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
-	{ TERMMOD,              XK_Escape,      keyboard_select,{ 0 } },
+	{ MODKEY,               XK_u,           copyurl,        {.i =  0} },
+	{ MODKEY,               XK_s,           keyboard_select,{ 0     } },
 };
 
 /*
